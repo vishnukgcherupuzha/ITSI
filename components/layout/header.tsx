@@ -133,12 +133,12 @@ const Header = () => {
             Home
           </Link>
 
-          <Dropdown
+          {/* <Dropdown
             title="Content Services"
             items={contentServices}
             isOpen={isContentOpen}
             setIsOpen={setIsContentOpen}
-          />
+          /> */}
 
           <Dropdown
             title="Technical Services"
@@ -147,14 +147,14 @@ const Header = () => {
             setIsOpen={setIsTechnicalOpen}
           />
 
-          <Dropdown
+          {/* <Dropdown
             title="Resources"
             items={resources}
             isOpen={isResourcesOpen}
             setIsOpen={setIsResourcesOpen}
-          />
+          /> */}
 
-          <Link
+          {/* <Link
             href="/careers"
             className={`text-sm font-medium transition-colors hover:text-secondary ${
               isActive("/careers") ? "text-secondary" : "text-gray-600"
@@ -170,7 +170,7 @@ const Header = () => {
             }`}
           >
             About Us
-          </Link>
+          </Link> */}
         </nav>
 
         {/* CTA Button */}
