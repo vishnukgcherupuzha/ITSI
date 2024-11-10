@@ -51,7 +51,7 @@ const HeroSection = () => {
               </p>
               
               <p className="text-gray-600">
-                Tap into our knowledge-based resources and service. We pride ourselves on delivering exceptional customer service by developing customized solutions to improve our client's workflows and efficiency helping them achieve their short and long term goals.
+                Tap into our knowledge-based resources and service. We pride ourselves on delivering exceptional customer service by developing customized solutions to improve our clients workflows and efficiency helping them achieve their short and long term goals.
               </p>
             </div>
 

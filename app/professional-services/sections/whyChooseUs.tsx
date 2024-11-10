@@ -85,7 +85,7 @@ export default function WhyChooseUs() {
           </div>
           
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-            Elevate your business with Innovatia's expert professional services.
+            Elevate your business with Innovatias expert professional services.
           </h2>
           
           <p className="text-lg text-gray-600 leading-relaxed">

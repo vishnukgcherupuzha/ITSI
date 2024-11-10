@@ -88,7 +88,6 @@ const services = [
 ];
 
 export default function ServicesGrid() {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const sectionRef = useRef(null);
   const [isIntersecting, setIsIntersecting] = useState(false);
 
@@ -154,11 +153,9 @@ export default function ServicesGrid() {
             <div
               key={index}
               className="group relative"
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
             >
               {/* Background gradient on hover */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl`} />
+              <div className={`absolute inset-0 bg-gradient-to-br rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl`} />
               
               {/* Card Content */}
               <div 
@@ -171,7 +168,7 @@ export default function ServicesGrid() {
               >
                 {/* Icon Container */}
                 <div className="mb-6 transform group-hover:scale-110 transition-transform duration-300">
-                  <div className={`p-3 rounded-xl bg-gradient-to-br ${service.gradient} group-hover:shadow-lg transition-all duration-300`}>
+                  <div className={`p-3 rounded-xl bg-gradient-to-br group-hover:shadow-lg transition-all duration-300`}>
                     {service.icon}
                   </div>
                 </div>

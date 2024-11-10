@@ -34,7 +34,6 @@ const teamMembers = [
 ]
 
 export default function TeamSection() {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const sectionRef = useRef(null);
   const [isIntersecting, setIsIntersecting] = useState(false);
 
@@ -100,8 +99,6 @@ export default function TeamSection() {
             <div
               key={index}
               className="group relative"
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
             >
               {/* Background gradient on hover */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/10 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl" />

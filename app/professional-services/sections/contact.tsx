@@ -7,7 +7,7 @@ import { Checkbox } from "@/components/ui/checkbox"
 import { MessagesSquare, Mail, User, ArrowRight } from "lucide-react"
 
 export default function ContactForm() {
-  const [formData, setFormData] = useState({
+  const [formData] = useState({
     email: "",
     name: "",
     message: "",
@@ -36,25 +36,6 @@ export default function ContactForm() {
     };
   }, []);
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log(formData)
-  }
-
-  const handleChange = (e) => {
-    const { name, value } = e.target
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }))
-  }
-
-  const handleCheckboxChange = (checked) => {
-    setFormData(prev => ({
-      ...prev,
-      communications: checked
-    }))
-  }
 
   return (
     <section ref={sectionRef} className="relative py-24 px-4 overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50">
@@ -92,7 +73,7 @@ export default function ContactForm() {
                 What can we help you with?
               </h2>
               <p className="text-lg text-gray-600">
-                Let's discuss how we can transform your business together. Our team is ready to help you achieve your goals.
+                Lets discuss how we can transform your business together. Our team is ready to help you achieve your goals.
               </p>
             </div>
 
@@ -109,7 +90,7 @@ export default function ContactForm() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-primary">Email Us</h3>
-                    <p className="text-gray-600">We'll respond within 24 hours</p>
+                    <p className="text-gray-600">Well respond within 24 hours</p>
                   </div>
                 </div>
               </div>
@@ -138,7 +119,7 @@ export default function ContactForm() {
           }`}>
             {/* Form Card */}
             <div className="relative bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-gray-100">
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form className="space-y-6">
                 {/* Form fields with staggered animations */}
                 {[
                   {
@@ -153,7 +134,6 @@ export default function ContactForm() {
                             name="email"
                             type="email"
                             value={formData.email}
-                            onChange={handleChange}
                             placeholder="your@email.com"
                             className="pl-10 bg-white/50 focus:bg-white transition-colors"
                             required
@@ -176,7 +156,6 @@ export default function ContactForm() {
                             name="name"
                             type="text"
                             value={formData.name}
-                            onChange={handleChange}
                             placeholder="John"
                             className="pl-10 bg-white/50 focus:bg-white transition-colors"
                           />
@@ -196,7 +175,6 @@ export default function ContactForm() {
                           id="message"
                           name="message"
                           value={formData.message}
-                          onChange={handleChange}
                           placeholder="How can we help you?"
                           className="min-h-[120px] bg-white/50 focus:bg-white transition-colors"
                         />
@@ -226,7 +204,6 @@ export default function ContactForm() {
                     <Checkbox 
                       id="communications"
                       checked={formData.communications}
-                      onCheckedChange={handleCheckboxChange}
                     />
                     <label
                       htmlFor="communications"

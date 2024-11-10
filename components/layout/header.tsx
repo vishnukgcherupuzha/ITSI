@@ -46,7 +46,7 @@ const Header = () => {
     isOpen: boolean;
     setIsOpen: (value: boolean) => void;
   }) => {
-    let timeoutRef = useRef<NodeJS.Timeout>();
+    const timeoutRef = useRef<NodeJS.Timeout>();
 
     const handleMouseEnter = () => {
       if (timeoutRef.current) {

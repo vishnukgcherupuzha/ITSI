@@ -31,7 +31,6 @@ const steps = [
 ]
 
 export default function ApproachProcess() {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const sectionRef = useRef(null);
   const [isIntersecting, setIsIntersecting] = useState(false);
 
@@ -106,8 +105,6 @@ export default function ApproachProcess() {
               <div
                 key={index}
                 className="relative group"
-                onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(null)}
               >
                 {/* Number Circle */}
                 <div className={`absolute left-0 w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center border-2 border-primary/20 group-hover:border-primary/50 transition-all duration-700 ${
