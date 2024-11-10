@@ -8,17 +8,17 @@ import { ChevronDown } from "lucide-react";
 
 const Header = () => {
   const pathname = usePathname();
-  const [isContentOpen, setIsContentOpen] = useState(false);
+  // const [isContentOpen, setIsContentOpen] = useState(false);
   const [isTechnicalOpen, setIsTechnicalOpen] = useState(false);
-  const [isResourcesOpen, setIsResourcesOpen] = useState(false);
+  // const [isResourcesOpen, setIsResourcesOpen] = useState(false);
 
-  const contentServices = [
-    { title: "Content Strategy", href: "/content-strategy" },
-    { title: "Information Architecture", href: "/information-architecture" },
-    { title: "Documentation Services", href: "/documentation-services" },
-    { title: "Learning Services", href: "/learning-services" },
-    { title: "AI Services", href: "/ai-services" },
-  ];
+  // const contentServices = [
+  //   { title: "Content Strategy", href: "/content-strategy" },
+  //   { title: "Information Architecture", href: "/information-architecture" },
+  //   { title: "Documentation Services", href: "/documentation-services" },
+  //   { title: "Learning Services", href: "/learning-services" },
+  //   { title: "AI Services", href: "/ai-services" },
+  // ];
 
   const technicalServices = [
     { title: "Professional Services", href: "/professional-services" },
@@ -26,11 +26,11 @@ const Header = () => {
     { title: "Business Process Outsourcing (BPO)", href: "/bpo" },
   ];
 
-  const resources = [
-    { title: "Blog", href: "/blog" },
-    { title: "Case Studies", href: "/case-studies" },
-    { title: "News", href: "/news" },
-  ];
+  // const resources = [
+  //   { title: "Blog", href: "/blog" },
+  //   { title: "Case Studies", href: "/case-studies" },
+  //   { title: "News", href: "/news" },
+  // ];
 
   const isActive = (path: string) => pathname === path;
 
